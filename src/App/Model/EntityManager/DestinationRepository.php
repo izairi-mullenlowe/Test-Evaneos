@@ -7,17 +7,17 @@ use App\Model\Entity\Connexion;
 
 class DestinationRepository implements Repository
 {
-    use SingletonTrait;
-
     private $country;
     private $conjunction;
     private $computerName;
+    private $db;
 
     /**
      * DestinationRepository constructor.
      */
-    public function __construct()
+    public function __construct(MysqlDatabase $db)
     {
+        $this->db = $db;
         $this->country = Faker\Factory::create()->country;
         $this->conjunction = 'en';
         $this->computerName = Faker\Factory::create()->slug();

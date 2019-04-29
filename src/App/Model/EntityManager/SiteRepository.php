@@ -7,16 +7,16 @@ use App\Model\Entity\Connexion;
 
 class SiteRepository implements Repository
 {
-    use SingletonTrait;
-
     private $url;
+    private $db;
 
     /**
      * SiteRepository constructor.
      *
      */
-    public function __construct()
+    public function __construct(MysqlDatabase $db)
     {
+        $this->db = $db;
         // DO NOT MODIFY THIS METHOD
         $this->url = Faker\Factory::create()->url;
     }

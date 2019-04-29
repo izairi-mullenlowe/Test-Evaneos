@@ -7,17 +7,17 @@ use App\Model\Entity\Connexion;
 
 class QuoteRepository implements Repository
 {
-    use SingletonTrait;
-
     private $siteId;
     private $destinationId;
     private $date;
+    private $db;
 
     /**
      * QuoteRepository constructor.
      */
-    public function __construct()
+    public function __construct(MysqlDatabase $db)
     {
+        $this->db = $db;
         // DO NOT MODIFY THIS METHOD
         $generator = Faker\Factory::create();
 

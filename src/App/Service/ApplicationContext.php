@@ -1,9 +1,9 @@
 <?php
 
+namespace App\Service;
+
 class ApplicationContext
 {
-    use SingletonTrait;
-
     /**
      * @var Site
      */
