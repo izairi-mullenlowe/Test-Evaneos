@@ -1,6 +1,10 @@
 <?php
 
-class Template
+namespace App\Model\Entity;
+
+use Core\Entity\Entity;
+
+class Template extends Entity
 {
     public $id;
     public $subject;

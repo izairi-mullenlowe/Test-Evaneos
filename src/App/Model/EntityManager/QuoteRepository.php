@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Model\EntityManager;
+
+use Core\Database\MysqlDatabase;
+use App\Model\Entity\Connexion;
+
 class QuoteRepository implements Repository
 {
     use SingletonTrait;

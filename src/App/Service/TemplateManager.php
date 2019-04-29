@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Service;
+
 class TemplateManager
 {
     public function getTemplateComputed(Template $tpl, array $data)

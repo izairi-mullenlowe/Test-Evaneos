@@ -1,6 +1,10 @@
 <?php
 
-class Site
+namespace App\Model\Entity;
+
+use Core\Entity\Entity;
+
+class Site extends Entity
 {
     public $id;
     public $url;
