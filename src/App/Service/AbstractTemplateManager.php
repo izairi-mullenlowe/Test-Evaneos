@@ -11,7 +11,7 @@ use App\Model\EntityManager\DestinationRepository;
 
 class AbstractTemplateManager
 {
-    private function computeText($text, array $data)
+    protected function computeText($text, array $data)
     {
         $APPLICATION_CONTEXT = new ApplicationContext();
 
